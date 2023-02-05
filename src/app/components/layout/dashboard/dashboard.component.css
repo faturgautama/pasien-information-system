@@ -1,0 +1,12 @@
+section#dashboard {
+  padding-top: 3.5rem;
+  height: calc(100vh - 0rem);
+  background-color: var(--bs-gray-100);
+}
+
+.card-dashboard {
+  border-top: 5px solid var(--bs-blue);
+  border-bottom: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}

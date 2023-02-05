@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+html,
+body {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.form-label {
+  font-size: 15px;
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  background-color: var(--bs-gray-100);
+  opacity: 1;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid var(--bs-blue);
+  border-radius: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

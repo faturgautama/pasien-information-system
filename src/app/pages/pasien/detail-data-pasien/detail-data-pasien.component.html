@@ -1,0 +1,146 @@
+<!-- Page Title & Action Button -->
+<div class="row mb-4">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <app-page-title></app-page-title>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-end">
+        <app-action-button [buttons]="ActionButtons" (clicked)="handleClickActionButton($event)"></app-action-button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <!-- No. Rekam Medis -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    No. Rekam Medis
+                </label>
+                <input type="text" class="form-control form-select-sm" [value]="Pasien?.no_rekam_medis"
+                    [attr.disabled]="true">
+            </div>
+        </div>
+
+        <!-- Waktu Entry -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    Waktu Entry
+                </label>
+                <input type="date" class="form-control form-select-sm" [value]="Pasien?.waktu_entry"
+                    [attr.disabled]="true">
+            </div>
+        </div>
+
+        <!-- No. Identitas -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    No. Identitas
+                </label>
+                <input type="text" class="form-control form-select-sm" [value]="Pasien?.no_identitas"
+                    [attr.disabled]="true">
+            </div>
+        </div>
+
+        <!-- Nama Lengkap -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    Nama Lengkap
+                </label>
+                <input type="text" class="form-control form-select-sm" [value]="Pasien?.nama_lengkap"
+                    [attr.disabled]="true">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <!-- Gender -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    Gender
+                </label>
+                <input type="text" class="form-control form-select-sm" [value]="Pasien?.gender" [attr.disabled]="true">
+            </div>
+        </div>
+
+        <!-- Tanggal Lahir -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    Tanggal Lahir
+                </label>
+                <input type="date" class="form-control form-select-sm" [value]="Pasien?.tanggal_lahir"
+                    [attr.disabled]="true">
+            </div>
+        </div>
+
+        <!-- Tempat Lahir -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    Tempat Lahir
+                </label>
+                <input type="text" class="form-control form-select-sm" [value]="Pasien?.tempat_lahir"
+                    [attr.disabled]="true">
+            </div>
+        </div>
+
+        <!-- Usia -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    Usia (Tahun)
+                </label>
+                <input type="number" class="form-control form-select-sm" [value]="Pasien?.usia" [attr.disabled]="true">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <!-- Alamat Lengkap -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    Alamat Lengkap
+                </label>
+                <textarea type="text" class="form-control form-select-sm" rows="5" [value]="Pasien?.alamat_lengkap"
+                    style="height: 112px; resize: none;" [attr.disabled]="true"></textarea>
+            </div>
+        </div>
+
+        <!-- Tempat Lahir -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    Kota Alamat Tinggal
+                </label>
+                <input type="text" class="form-control form-select-sm" [value]="Pasien?.kota" [attr.disabled]="true">
+            </div>
+        </div>
+
+        <!-- Is Active -->
+        <div class="row mb-3">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="" class="form-label">
+                    Status Active
+                </label>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="is_active" id="is_active_true" [value]="true"
+                        [attr.disabled]="true" [checked]="Pasien?.is_active">
+                    <label class="form-check-label" for="is_active_true">Active</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="is_active" id="is_active_false" [value]="false"
+                        [attr.disabled]="true" [checked]="!Pasien?.is_active">
+                    <label class="form-check-label" for="is_active_false">Non Active</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

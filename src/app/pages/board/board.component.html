@@ -1,0 +1,11 @@
+<div class="row mb-3">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <app-page-title></app-page-title>
+    </div>
+</div>
+
+<div class="row">
+    <div *ngFor="let item of Boards" class="col-lg-3 col-md-34 col-sm-3 col-xs-3">
+        <app-kanban-board [data]="item"></app-kanban-board>
+    </div>
+</div>

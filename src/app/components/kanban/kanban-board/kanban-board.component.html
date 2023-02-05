@@ -1,0 +1,27 @@
+<div cdkDropListGroup class="row">
+    <div cdkDropList [id]="data.id" class="col-lg-12 col-md-12 col-sm-12 col-xs-2"
+        [cdkDropListConnectedTo]="data.connected_to" [cdkDropListData]="data.data"
+        (cdkDropListDropped)="handleCdkDrop($event)">
+        <div class="card">
+            <div class="card-header border-0" [style.background-color]="data.header_background_color">
+                <h5 class="mb-0">
+                    {{ data.header_caption }}
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div cdkDrag *ngFor="let item of data.data" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2"
+                        style="cursor: move">
+                        <app-kanban-card [data]="item"></app-kanban-card>
+                    </div>
+                </div>
+
+                <div class="row" *ngIf="data.data?.length < 1">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pt-2">
+                        <p class="font-cabin mb-0 text-hitam-muda">Tidak Ada Data</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
